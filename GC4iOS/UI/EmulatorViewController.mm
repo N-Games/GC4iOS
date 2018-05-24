@@ -80,6 +80,9 @@ void GCPad::GetInput(GCPadStatus* const pad)
     
     pad->substickX = (uint8_t)joyData[1].x;
     pad->substickY = (uint8_t)joyData[1].y;
+
+    pad->triggerLeft  = buttonState * 2;
+    pad->triggerRight = buttonState * 4;
 }
 
 // Create a new class to handle the controller later
